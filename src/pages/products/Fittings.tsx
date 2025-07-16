@@ -8,28 +8,9 @@ const Fittings: React.FC = () => {
 
   const fittingTypes = [
     {
-      title: 'Flanges',
-      description: 'High-quality flanges for secure and reliable pipe connections',
-      image: 'https://5.imimg.com/data5/TV/YL/UK/SELLER-5417651/food-grade-hose-pipe-500x500.jpg',
-      features: [
-        'Various materials: SS, CS, Alloy Steel',
-        'Standard sizes from 1/2" to 48"',
-        'ANSI, DIN, JIS standards',
-        'Raised face and flat face options',
-        'Custom drilling patterns available'
-      ],
-      types: [
-        'Weld Neck Flanges',
-        'Slip-On Flanges',
-        'Blind Flanges',
-        'Socket Weld Flanges',
-        'Threaded Flanges'
-      ]
-    },
-    {
       title: 'Quick Release Couplings',
       description: 'Fast and secure connections for easy assembly and disassembly',
-      image: 'https://4.imimg.com/data4/SA/DD/MY-4968245/tanker-composite-hose-500x500.jpg',
+      image: 'https://img1.exportersindia.com/product_images/bc-full/2021/11/3049193/quick-release-coupling-1637834266-6092361.jpeg',
       features: [
         'One-handed operation',
         'Leak-proof sealing',
@@ -48,7 +29,7 @@ const Fittings: React.FC = () => {
     {
       title: 'Camlock Couplings',
       description: 'Cam and groove couplings for rapid connection and disconnection',
-      image: 'https://5.imimg.com/data5/SELLER/Default/2025/1/478060981/MU/RF/OM/82221264/rubber-expansion-bellows-250x250.jpeg',
+      image: 'https://www.unionfitting.com/wp-content/uploads/2023/08/%E5%9B%BE%E7%89%871.png',
       features: [
         'Quick connect/disconnect',
         'Self-sealing design',
@@ -65,22 +46,24 @@ const Fittings: React.FC = () => {
       ]
     },
     {
-      title: 'Tricolor Fittings',
-      description: 'Specialized color-coded fittings for easy identification and safety',
-      image: 'https://5.imimg.com/data5/SELLER/Default/2024/2/391627709/PF/AF/DZ/134605945/ptfe-bellow-expansion-joint-500x500.png',
+      title: 'Tri Clover Fittings',
+      description: 'Sanitary tri-clamp fittings designed for hygienic applications in food, pharmaceutical, and biotech industries',
+      image: 'https://www.msifittings.com/images/tri-clover-fittings.jpg',
       features: [
-        'Color-coded for easy identification',
-        'High-grade materials',
-        'Leak-proof connections',
-        'Easy installation',
-        'Compliance with safety standards'
+        'Sanitary design for hygienic applications',
+        'Quick assembly and disassembly',
+        'Smooth internal surfaces prevent contamination',
+        'FDA approved materials',
+        'Easy cleaning and sterilization',
+        'Gasket sealing system'
       ],
       types: [
-        'Medical Gas Fittings',
-        'Laboratory Fittings',
-        'Industrial Gas Fittings',
-        'Compressed Air Fittings',
-        'Vacuum System Fittings'
+        'Tri-Clamp Ferrules',
+        'Tri-Clamp Gaskets',
+        'Tri-Clamp Clamps',
+        'Tri-Clamp Reducers',
+        'Tri-Clamp Tees and Elbows',
+        'Tri-Clamp End Caps'
       ]
     }
   ];

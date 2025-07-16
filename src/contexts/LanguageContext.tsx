@@ -33,7 +33,7 @@ const translations = {
     flanges: 'Flanges',
     quickRelease: 'Quick Release Coupling',
     camlock: 'Camlock Coupling',
-    tricolor: 'Tricolor Fittings',
+    triclover: 'Tri Clover Fittings',
     
     // About
     aboutTitle: 'About Ramal Industries',
@@ -80,7 +80,7 @@ const translations = {
     flanges: 'الشفاه',
     quickRelease: 'وصلة التحرير السريع',
     camlock: 'وصلة كاملوك',
-    tricolor: 'تركيبات ثلاثية الألوان',
+    triclover: 'تركيبات تري كلوفر',
     
     // About
     aboutTitle: 'حول رمال الصناعات',

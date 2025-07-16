@@ -62,21 +62,24 @@ const Bellows: React.FC = () => {
       ]
     },
     {
-      title: 'Fabric Expansion Joints',
-      description: 'High-temperature fabric expansion joints for gas and air applications',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/1/13/Metallschl%C3%A4uche.jpg',
+      title: 'High Temperature Fabric Bellow',
+      description: 'Specialized fabric bellows designed for high-temperature applications and thermal insulation',
+      image: 'https://images.squarespace-cdn.com/content/v1/5bcea0563560c3270c50e32d/8a8d87be-01f7-4808-90f7-d5c4a8c3ef6a/flexible-fabric-bellows-4.jpg',
       features: [
-        'High temperature resistance',
+        'Exceptional high temperature resistance up to 1000°C',
         'Lightweight construction',
-        'Excellent thermal insulation',
-        'Custom fabric selection',
-        'Large movement capability'
+        'Superior thermal insulation properties',
+        'Custom fabric materials for specific applications',
+        'Large axial and lateral movement capability',
+        'Excellent chemical resistance'
       ],
       applications: [
-        'Power generation',
-        'Cement industry',
-        'Steel mills',
-        'Exhaust systems'
+        'High-temperature ducting systems',
+        'Industrial furnaces and kilns',
+        'Power plant boiler connections',
+        'Steel mill applications',
+        'Cement plant equipment',
+        'Gas turbine exhaust systems'
       ]
     }
   ];
