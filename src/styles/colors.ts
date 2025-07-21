@@ -18,21 +18,19 @@ export const colors = {
   },
   
   // Secondary colors
-  secondary: {
-    main: '#0EA5E9',
-    light: '#38BDF8',
-    dark: '#0284C7',
-    50: '#F0F9FF',
-    100: '#E0F2FE',
-    200: '#BAE6FD',
-    300: '#7DD3FC',
-    400: '#38BDF8',
-    500: '#0EA5E9',
-    600: '#0284C7',
-    700: '#0369A1',
-    800: '#075985',
-    900: '#0C4A6E'
-  },
+secondary: {
+  main: '#B0A695',
+  50: '#FFFFFF',
+  100: '#FFFFEE',
+  200: '#F6E8D1',
+  300: '#B0A695',
+  400: '#968D7F',
+  500: '#7B7468',
+  600: '#615B52',
+  700: '#6B6754',
+  800: '#4B4735',
+  900: '#2C2A1A'
+}
   
   // Accent colors
   accent: {
