@@ -1,23 +1,24 @@
 import React from 'react';
 import { Award, Users, Target, CheckCircle } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { colors } from '../styles/colors';
 
 const About: React.FC = () => {
   const { t } = useLanguage();
 
   const values = [
     {
-      icon: <Award className="h-8 w-8 text-[#34699A]" />,
+      icon: <Award className="h-8 w-8" style={{ color: colors.primary.main }} />,
       title: 'Quality Excellence',
       description: 'We maintain the highest standards in all our products and services'
     },
     {
-      icon: <Users className="h-8 w-8 text-[#34699A]" />,
+      icon: <Users className="h-8 w-8" style={{ color: colors.primary.main }} />,
       title: 'Customer Focus',
       description: 'Our customers are at the heart of everything we do'
     },
     {
-      icon: <Target className="h-8 w-8 text-[#34699A]" />,
+      icon: <Target className="h-8 w-8" style={{ color: colors.primary.main }} />,
       title: 'Innovation',
       description: 'Continuous improvement and innovation in our products and processes'
     }
@@ -35,7 +36,9 @@ const About: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Header Section */}
-      <section className="bg-gradient-to-r from-[#34699A] to-blue-600 text-white py-16">
+      <section className="bg-gradient-to-r text-white py-16" style={{ 
+        background: `linear-gradient(to right, ${colors.primary.main}, ${colors.secondary.main})`
+      }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -116,7 +119,7 @@ const About: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {achievements.map((achievement, index) => (
               <div key={index} className="flex items-center p-4 bg-gray-50 rounded-lg">
-                <CheckCircle className="h-6 w-6 text-[#34699A] mr-3 flex-shrink-0" />
+                <CheckCircle className="h-6 w-6 mr-3 flex-shrink-0" style={{ color: colors.primary.main }} />
                 <span className="text-gray-700 font-medium">{achievement}</span>
               </div>
             ))}
@@ -125,7 +128,7 @@ const About: React.FC = () => {
       </section>
 
       {/* Mission & Vision Section */}
-      <section className="py-16 bg-[#34699A] text-white">
+      <section className="py-16 text-white" style={{ backgroundColor: colors.primary.main }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>

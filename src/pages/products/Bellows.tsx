@@ -2,6 +2,7 @@ import React from 'react';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../../contexts/LanguageContext';
+import { colors } from '../../styles/colors';
 
 const Bellows: React.FC = () => {
   const { t } = useLanguage();
@@ -87,7 +88,9 @@ const Bellows: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Header Section */}
-      <section className="bg-gradient-to-r from-[#34699A] to-blue-600 text-white py-16">
+      <section className="bg-gradient-to-r text-white py-16" style={{ 
+        background: `linear-gradient(to right, ${colors.primary.main}, ${colors.secondary.main})`
+      }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -126,7 +129,7 @@ const Bellows: React.FC = () => {
                     <ul className="space-y-2">
                       {bellow.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center">
-                          <CheckCircle className="h-5 w-5 text-[#34699A] mr-3 flex-shrink-0" />
+                          <CheckCircle className="h-5 w-5 mr-3 flex-shrink-0" style={{ color: colors.primary.main }} />
                           <span className="text-gray-700">{feature}</span>
                         </li>
                       ))}
@@ -138,7 +141,7 @@ const Bellows: React.FC = () => {
                     <ul className="space-y-2">
                       {bellow.applications.map((application, appIndex) => (
                         <li key={appIndex} className="flex items-center">
-                          <ArrowRight className="h-4 w-4 text-[#34699A] mr-3 flex-shrink-0" />
+                          <ArrowRight className="h-4 w-4 mr-3 flex-shrink-0" style={{ color: colors.primary.main }} />
                           <span className="text-gray-700">{application}</span>
                         </li>
                       ))}
@@ -164,21 +167,21 @@ const Bellows: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center p-6">
-              <div className="bg-[#34699A] text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <div className="text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: colors.primary.main }}>
                 <span className="text-2xl font-bold">1</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Thermal Compensation</h3>
               <p className="text-gray-600">Absorbs thermal expansion and contraction in piping systems</p>
             </div>
             <div className="text-center p-6">
-              <div className="bg-[#34699A] text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <div className="text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: colors.primary.main }}>
                 <span className="text-2xl font-bold">2</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Vibration Isolation</h3>
               <p className="text-gray-600">Reduces vibration transmission and noise in systems</p>
             </div>
             <div className="text-center p-6">
-              <div className="bg-[#34699A] text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <div className="text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: colors.primary.main }}>
                 <span className="text-2xl font-bold">3</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Misalignment Correction</h3>
@@ -189,7 +192,7 @@ const Bellows: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-[#34699A] text-white">
+      <section className="py-16 text-white" style={{ backgroundColor: colors.primary.main }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Need Custom Bellow Solutions?
@@ -199,7 +202,8 @@ const Bellows: React.FC = () => {
           </p>
           <Link
             to="/contact"
-            className="bg-white text-[#34699A] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
+            className="bg-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
+            style={{ color: colors.primary.main }}
           >
             Contact Engineers <ArrowRight className="ml-2 h-5 w-5" />
           </Link>

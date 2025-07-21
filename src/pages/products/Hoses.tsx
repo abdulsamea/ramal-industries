@@ -2,6 +2,7 @@ import React from 'react';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../../contexts/LanguageContext';
+import { colors } from '../../styles/colors';
 
 const Hoses: React.FC = () => {
   const { t } = useLanguage();
@@ -84,7 +85,9 @@ const Hoses: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Header Section */}
-      <section className="bg-gradient-to-r from-[#34699A] to-blue-600 text-white py-16">
+      <section className="bg-gradient-to-r text-white py-16" style={{ 
+        background: `linear-gradient(to right, ${colors.primary.main}, ${colors.secondary.main})`
+      }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -123,7 +126,7 @@ const Hoses: React.FC = () => {
                     <ul className="space-y-2">
                       {hose.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center">
-                          <CheckCircle className="h-5 w-5 text-[#34699A] mr-3 flex-shrink-0" />
+                          <CheckCircle className="h-5 w-5 mr-3 flex-shrink-0" style={{ color: colors.primary.main }} />
                           <span className="text-gray-700">{feature}</span>
                         </li>
                       ))}
@@ -135,7 +138,7 @@ const Hoses: React.FC = () => {
                     <ul className="space-y-2">
                       {hose.applications.map((application, appIndex) => (
                         <li key={appIndex} className="flex items-center">
-                          <ArrowRight className="h-4 w-4 text-[#34699A] mr-3 flex-shrink-0" />
+                          <ArrowRight className="h-4 w-4 mr-3 flex-shrink-0" style={{ color: colors.primary.main }} />
                           <span className="text-gray-700">{application}</span>
                         </li>
                       ))}
@@ -149,7 +152,7 @@ const Hoses: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-[#34699A] text-white">
+      <section className="py-16 text-white" style={{ backgroundColor: colors.primary.main }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Need Custom Hose Solutions?
@@ -159,7 +162,8 @@ const Hoses: React.FC = () => {
           </p>
           <Link
             to="/contact"
-            className="bg-white text-[#34699A] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
+            className="bg-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
+            style={{ color: colors.primary.main }}
           >
             Get Quote <ArrowRight className="ml-2 h-5 w-5" />
           </Link>

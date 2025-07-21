@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import emailjs from '@emailjs/browser';
+import { colors } from '../styles/colors';
 
 const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
@@ -65,19 +66,19 @@ const Contact: React.FC = () => {
 
   const contactInfo = [
     {
-      icon: <Phone className="h-6 w-6 text-[#34699A]" />,
+      icon: <Phone className="h-6 w-6" style={{ color: colors.primary.main }} />,
       title: 'Phone',
       details: ['+91-70214 83925'],
       link: 'tel:+917021483925'
     },
     {
-      icon: <Mail className="h-6 w-6 text-[#34699A]" />,
+      icon: <Mail className="h-6 w-6" style={{ color: colors.primary.main }} />,
       title: 'Email',
       details: ['sales@ramalindustries.com'],
       link: 'mailto:sales@ramalindustries.com'
     },
     {
-      icon: <MapPin className="h-6 w-6 text-[#34699A]" />,
+      icon: <MapPin className="h-6 w-6" style={{ color: colors.primary.main }} />,
       title: 'Address',
       details: [
         'Sami Qureshi Chawl, Room No. 7,',
@@ -86,7 +87,7 @@ const Contact: React.FC = () => {
       ]
     },
     {
-      icon: <Clock className="h-6 w-6 text-[#34699A]" />,
+      icon: <Clock className="h-6 w-6" style={{ color: colors.primary.main }} />,
       title: 'Business Hours',
       details: [
         'Monday - Saturday: 9:00 AM - 6:00 PM',
@@ -98,7 +99,9 @@ const Contact: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Header Section */}
-      <section className="bg-gradient-to-r from-[#34699A] to-blue-600 text-white py-16">
+      <section className="bg-gradient-to-r text-white py-16" style={{ 
+        background: `linear-gradient(to right, ${colors.primary.main}, ${colors.secondary.main})`
+      }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -134,7 +137,8 @@ const Contact: React.FC = () => {
                       {info.link ? (
                         <a 
                           href={info.link}
-                          className="text-[#34699A] hover:text-blue-600 transition-colors"
+                          className="hover:opacity-80 transition-colors"
+                          style={{ color: colors.primary.main }}
                         >
                           {info.details.map((detail, idx) => (
                             <div key={idx}>{detail}</div>
@@ -186,7 +190,16 @@ const Contact: React.FC = () => {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Enter your full name"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#34699A] focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent transition-colors"
+                    style={{ 
+                      '--focus-ring-color': colors.primary.main 
+                    } as React.CSSProperties}
+                    onFocus={(e) => {
+                      e.target.style.boxShadow = `0 0 0 2px ${colors.primary.main}40`;
+                    }}
+                    onBlur={(e) => {
+                      e.target.style.boxShadow = 'none';
+                    }}
                     required
                   />
                 </div>
@@ -203,7 +216,13 @@ const Contact: React.FC = () => {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="Enter your email address"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#34699A] focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent transition-colors"
+                    onFocus={(e) => {
+                      e.target.style.boxShadow = `0 0 0 2px ${colors.primary.main}40`;
+                    }}
+                    onBlur={(e) => {
+                      e.target.style.boxShadow = 'none';
+                    }}
                     required
                   />
                 </div>
@@ -220,7 +239,13 @@ const Contact: React.FC = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="Enter your phone number"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#34699A] focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent transition-colors"
+                    onFocus={(e) => {
+                      e.target.style.boxShadow = `0 0 0 2px ${colors.primary.main}40`;
+                    }}
+                    onBlur={(e) => {
+                      e.target.style.boxShadow = 'none';
+                    }}
                   />
                 </div>
 
@@ -236,7 +261,13 @@ const Contact: React.FC = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     placeholder="What is this regarding?"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#34699A] focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent transition-colors"
+                    onFocus={(e) => {
+                      e.target.style.boxShadow = `0 0 0 2px ${colors.primary.main}40`;
+                    }}
+                    onBlur={(e) => {
+                      e.target.style.boxShadow = 'none';
+                    }}
                     required
                   />
                 </div>
@@ -253,7 +284,13 @@ const Contact: React.FC = () => {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Please describe your requirements or inquiry in detail..."
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#34699A] focus:border-transparent resize-vertical transition-colors"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent resize-vertical transition-colors"
+                    onFocus={(e) => {
+                      e.target.style.boxShadow = `0 0 0 2px ${colors.primary.main}40`;
+                    }}
+                    onBlur={(e) => {
+                      e.target.style.boxShadow = 'none';
+                    }}
                     required
                   ></textarea>
                 </div>
@@ -262,7 +299,8 @@ const Contact: React.FC = () => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-[#34699A] text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-600 transition-colors flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full text-white py-3 px-6 rounded-lg font-semibold hover:opacity-90 transition-colors flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                  style={{ backgroundColor: colors.primary.main }}
                 >
                   {loading ? (
                     <>
@@ -298,7 +336,7 @@ const Contact: React.FC = () => {
           <div className="bg-white rounded-lg shadow-md p-6">
             <div className="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg flex items-center justify-center">
               <div className="text-center">
-                <MapPin className="h-12 w-12 text-[#34699A] mx-auto mb-4" />
+                <MapPin className="h-12 w-12 mx-auto mb-4" style={{ color: colors.primary.main }} />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Ramal Industries</h3>
                 <p className="text-gray-600">
                   Sami Qureshi Chawl, Room No. 7, Group No.2,<br />

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { colors } from '../styles/colors';
 
 const Footer: React.FC = () => {
   const { t } = useLanguage();
@@ -20,7 +21,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-2xl font-bold text-[#1089FF] mb-4">Ramal Industries</h3>
+            <h3 className="text-2xl font-bold mb-4" style={{ color: colors.secondary.main }}>Ramal Industries</h3>
             <p className="text-gray-300 mb-4 max-w-md">
               {t('footerText')}
             </p>
@@ -35,7 +36,14 @@ const Footer: React.FC = () => {
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-gray-300 hover:text-[#34699A] transition-colors"
+                    className="text-gray-300 hover:transition-colors"
+                    style={{ '--hover-color': colors.primary.main } as React.CSSProperties}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.color = colors.primary.main;
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.color = colors.gray[300];
+                    }}
                   >
                     {link.name}
                   </Link>
@@ -49,15 +57,15 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-4">{t('contactInfo')}</h4>
             <div className="space-y-3">
               <div className="flex items-start space-x-3">
-                <Phone size={18} className="text-[#34699A] mt-1 flex-shrink-0" />
+                <Phone size={18} className="mt-1 flex-shrink-0" style={{ color: colors.primary.main }} />
                 <span className="text-gray-300">+91-70214 83925</span>
               </div>
               <div className="flex items-start space-x-3">
-                <Mail size={18} className="text-[#34699A] mt-1 flex-shrink-0" />
+                <Mail size={18} className="mt-1 flex-shrink-0" style={{ color: colors.primary.main }} />
                 <span className="text-gray-300">sales@ramalindustries.com</span>
               </div>
               <div className="flex items-start space-x-3">
-                <MapPin size={18} className="text-[#34699A] mt-1 flex-shrink-0" />
+                <MapPin size={18} className="mt-1 flex-shrink-0" style={{ color: colors.primary.main }} />
                 <span className="text-gray-300">
                   Sami Qureshi Chawl, Room No. 7, Group No.2, Hariyali Village (East), Mumbai, India - 400083
                 </span>

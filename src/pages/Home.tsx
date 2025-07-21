@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Award, Users, Zap, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { colors } from '../styles/colors';
 
 const Home: React.FC = () => {
   const { t } = useLanguage();
@@ -9,17 +10,17 @@ const Home: React.FC = () => {
 
   const features = [
     {
-      icon: <Award className="h-8 w-8 text-[#34699A]" />,
+      icon: <Award className="h-8 w-8" style={{ color: colors.primary.main }} />,
       title: 'Quality Assurance',
       description: 'ISO certified manufacturing processes ensuring the highest quality standards'
     },
     {
-      icon: <Users className="h-8 w-8 text-[#34699A]" />,
+      icon: <Users className="h-8 w-8" style={{ color: colors.primary.main }} />,
       title: 'Expert Team',
       description: 'Experienced professionals with decades of industry expertise'
     },
     {
-      icon: <Zap className="h-8 w-8 text-[#34699A]" />,
+      icon: <Zap className="h-8 w-8" style={{ color: colors.primary.main }} />,
       title: 'Quick Delivery',
       description: 'Fast turnaround times with efficient supply chain management'
     }
@@ -122,13 +123,23 @@ const Home: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/products"
-                  className="bg-white text-[#34699A] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
+                  className="bg-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
+                  style={{ color: colors.primary.main }}
                 >
                   {t('learnMore')} <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
                 <Link
                   to="/contact"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-[#34699A] transition-colors"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white transition-colors"
+                  style={{ 
+                    '--hover-color': colors.primary.main 
+                  } as React.CSSProperties}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = colors.primary.main;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = colors.white;
+                  }}
                 >
                   {t('getQuote')}
                 </Link>
@@ -198,7 +209,8 @@ const Home: React.FC = () => {
                   <p className="text-gray-600 mb-4">{product.description}</p>
                   <Link
                     to="/products"
-                    className="text-[#34699A] font-semibold hover:text-blue-600 transition-colors inline-flex items-center"
+                    className="font-semibold hover:opacity-80 transition-colors inline-flex items-center"
+                    style={{ color: colors.primary.main }}
                   >
                     Learn More <ArrowRight className="ml-1 h-4 w-4" />
                   </Link>
@@ -235,7 +247,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-[#34699A] text-white">
+      <section className="py-16 text-white" style={{ backgroundColor: colors.primary.main }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Get Started?
@@ -245,7 +257,8 @@ const Home: React.FC = () => {
           </p>
           <Link
             to="/contact"
-            className="bg-white text-[#34699A] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
+            className="bg-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
+            style={{ color: colors.primary.main }}
           >
             Get in Touch <ArrowRight className="ml-2 h-5 w-5" />
           </Link>

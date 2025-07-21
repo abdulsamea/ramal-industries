@@ -2,6 +2,7 @@ import React from 'react';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../../contexts/LanguageContext';
+import { colors } from '../../styles/colors';
 
 const Fittings: React.FC = () => {
   const { t } = useLanguage();
@@ -71,7 +72,9 @@ const Fittings: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Header Section */}
-      <section className="bg-gradient-to-r from-[#34699A] to-blue-600 text-white py-16">
+      <section className="bg-gradient-to-r text-white py-16" style={{ 
+        background: `linear-gradient(to right, ${colors.primary.main}, ${colors.secondary.main})`
+      }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -110,7 +113,7 @@ const Fittings: React.FC = () => {
                     <ul className="space-y-2">
                       {fitting.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center">
-                          <CheckCircle className="h-5 w-5 text-[#34699A] mr-3 flex-shrink-0" />
+                          <CheckCircle className="h-5 w-5 mr-3 flex-shrink-0" style={{ color: colors.primary.main }} />
                           <span className="text-gray-700">{feature}</span>
                         </li>
                       ))}
@@ -122,7 +125,7 @@ const Fittings: React.FC = () => {
                     <ul className="space-y-2">
                       {fitting.types.map((type, typeIndex) => (
                         <li key={typeIndex} className="flex items-center">
-                          <ArrowRight className="h-4 w-4 text-[#34699A] mr-3 flex-shrink-0" />
+                          <ArrowRight className="h-4 w-4 mr-3 flex-shrink-0" style={{ color: colors.primary.main }} />
                           <span className="text-gray-700">{type}</span>
                         </li>
                       ))}
@@ -148,28 +151,28 @@ const Fittings: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="bg-[#34699A] text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <div className="text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: colors.primary.main }}>
                 <span className="text-sm font-bold">SS</span>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Stainless Steel</h3>
               <p className="text-gray-600 text-sm">Corrosion resistant, high strength</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="bg-[#34699A] text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <div className="text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: colors.primary.main }}>
                 <span className="text-sm font-bold">CS</span>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Carbon Steel</h3>
               <p className="text-gray-600 text-sm">Cost-effective, high strength</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="bg-[#34699A] text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <div className="text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: colors.primary.main }}>
                 <span className="text-sm font-bold">AL</span>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Aluminum</h3>
               <p className="text-gray-600 text-sm">Lightweight, corrosion resistant</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="bg-[#34699A] text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <div className="text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: colors.primary.main }}>
                 <span className="text-sm font-bold">BR</span>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Brass</h3>
@@ -192,25 +195,25 @@ const Fittings: React.FC = () => {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="bg-[#34699A] text-white rounded-lg p-4 mb-3">
+              <div className="text-white rounded-lg p-4 mb-3" style={{ backgroundColor: colors.primary.main }}>
                 <span className="text-xl font-bold">ANSI</span>
               </div>
               <p className="text-gray-600">American National Standards</p>
             </div>
             <div className="text-center">
-              <div className="bg-[#34699A] text-white rounded-lg p-4 mb-3">
+              <div className="text-white rounded-lg p-4 mb-3" style={{ backgroundColor: colors.primary.main }}>
                 <span className="text-xl font-bold">DIN</span>
               </div>
               <p className="text-gray-600">German Industrial Standards</p>
             </div>
             <div className="text-center">
-              <div className="bg-[#34699A] text-white rounded-lg p-4 mb-3">
+              <div className="text-white rounded-lg p-4 mb-3" style={{ backgroundColor: colors.primary.main }}>
                 <span className="text-xl font-bold">JIS</span>
               </div>
               <p className="text-gray-600">Japanese Industrial Standards</p>
             </div>
             <div className="text-center">
-              <div className="bg-[#34699A] text-white rounded-lg p-4 mb-3">
+              <div className="text-white rounded-lg p-4 mb-3" style={{ backgroundColor: colors.primary.main }}>
                 <span className="text-xl font-bold">BS</span>
               </div>
               <p className="text-gray-600">British Standards</p>
@@ -220,7 +223,7 @@ const Fittings: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-[#34699A] text-white">
+      <section className="py-16 text-white" style={{ backgroundColor: colors.primary.main }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Need Custom Fittings?
@@ -230,7 +233,8 @@ const Fittings: React.FC = () => {
           </p>
           <Link
             to="/contact"
-            className="bg-white text-[#34699A] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
+            className="bg-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
+            style={{ color: colors.primary.main }}
           >
             Request Custom Quote <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
