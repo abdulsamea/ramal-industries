@@ -30,7 +30,8 @@ secondary: {
   700: '#6B6754',
   800: '#4B4735',
   900: '#2C2A1A'
-}
+},
+
   
   // Accent colors
   accent: {
