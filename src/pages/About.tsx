@@ -25,7 +25,7 @@ const About: React.FC = () => {
 
   const achievements = [
     '10+ Years of Experience',
-    '1000+ Satisfied Customers',
+    '100+ Satisfied Customers',
     'ISO Certified Manufacturing',
     '24/7 Customer Support',
     'Pan-India Delivery Network',
