@@ -2,42 +2,43 @@
 export const colors = {
   // Primary brand colors
   primary: {
-    main: '#34699A',
-    light: '#4A7BAD',
-    dark: '#2A5580',
-    50: '#F0F4F8',
-    100: '#D9E6F2',
-    200: '#B3CCE5',
-    300: '#8DB3D8',
-    400: '#6799CB',
-    500: '#34699A',
-    600: '#2A5580',
-    700: '#204166',
-    800: '#162D4C',
-    900: '#0C1932'
+    main: '#06923E',
+    light: '#22A555',
+    dark: '#047D32',
+    50: '#F0FDF4',
+    100: '#DCFCE7',
+    200: '#BBF7D0',
+    300: '#86EFAC',
+    400: '#4ADE80',
+    500: '#06923E',
+    600: '#047D32',
+    700: '#15803D',
+    800: '#166534',
+    900: '#14532D'
   },
   
   // Secondary colors
   secondary: {
-    main: '#1089FF',
-    light: '#3D9FFF',
-    dark: '#0D6ECC',
-    50: '#E6F3FF',
-    100: '#CCE7FF',
-    200: '#99CFFF',
-    300: '#66B7FF',
-    400: '#339FFF',
-    500: '#1089FF',
-    600: '#0D6ECC',
-    700: '#0A5299',
-    800: '#073766',
-    900: '#041B33'
+    main: '#0EA5E9',
+    light: '#38BDF8',
+    dark: '#0284C7',
+    50: '#F0F9FF',
+    100: '#E0F2FE',
+    200: '#BAE6FD',
+    300: '#7DD3FC',
+    400: '#38BDF8',
+    500: '#0EA5E9',
+    600: '#0284C7',
+    700: '#0369A1',
+    800: '#075985',
+    900: '#0C4A6E'
   },
   
   // Accent colors
   accent: {
-    blue: '#1089FF',
-    lightBlue: '#4A7BAD'
+    blue: '#0EA5E9',
+    orange: '#F97316',
+    purple: '#8B5CF6'
   },
   
   // Status colors
