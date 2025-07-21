@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
           <div className="col-span-1 md:col-span-2">
             <h3
               className="text-2xl font-bold mb-4"
-              style={{ color: colors.secondary.main }}
+              style={{ color: 'white' }}
             >
               Ramal Industries
             </h3>

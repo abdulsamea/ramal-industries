@@ -101,7 +101,7 @@ const Header: React.FC = () => {
             <Link
               to="/"
               className="text-2xl font-bold"
-              style={{ color: colors.secondary.main }}
+              style={{ color: colors.primary.main }}
             >
               Ramal Industries
             </Link>

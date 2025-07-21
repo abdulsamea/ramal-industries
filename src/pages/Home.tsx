@@ -76,17 +76,20 @@ const Home: React.FC = () => {
     {
       title: t('flexibleHose'),
       description: 'High-quality flexible hoses for various industrial applications',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/1/13/Metallschl%C3%A4uche.jpg'
+      image: 'https://upload.wikimedia.org/wikipedia/commons/1/13/Metallschl%C3%A4uche.jpg',
+      link: '/products/hoses'
     },
     {
       title: t('bellowSolutions'),
       description: 'Precision-engineered bellow systems for specialized requirements',
-      image: 'https://ssflexhose.com/wp-content/uploads/2022/03/ss-expansion-joint-bellows-2.jpg'
+      image: 'https://ssflexhose.com/wp-content/uploads/2022/03/ss-expansion-joint-bellows-2.jpg',
+      link: '/products/bellows'
     },
     {
       title: t('endFittings'),
       description: 'Comprehensive range of end fittings including flanges and couplings',
-      image: 'https://5.imimg.com/data5/TV/YL/UK/SELLER-5417651/food-grade-hose-pipe-500x500.jpg'
+      image: 'https://www.msifittings.com/images/tri-clover-fittings.jpg',
+      link: '/products/fittings'
     }
   ];
 
@@ -208,7 +211,7 @@ const Home: React.FC = () => {
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{product.title}</h3>
                   <p className="text-gray-600 mb-4">{product.description}</p>
                   <Link
-                    to="/products/hoses"
+                    to={product.link}
                     className="font-semibold hover:opacity-80 transition-colors inline-flex items-center"
                     style={{ color: colors.primary.main }}
                   >
