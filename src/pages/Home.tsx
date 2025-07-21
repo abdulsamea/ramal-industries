@@ -122,7 +122,7 @@ const Home: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  to="/products"
+                  to="/products/hoses"
                   className="bg-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
                   style={{ color: colors.primary.main }}
                 >
@@ -208,7 +208,7 @@ const Home: React.FC = () => {
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{product.title}</h3>
                   <p className="text-gray-600 mb-4">{product.description}</p>
                   <Link
-                    to="/products"
+                    to="/products/hoses"
                     className="font-semibold hover:opacity-80 transition-colors inline-flex items-center"
                     style={{ color: colors.primary.main }}
                   >

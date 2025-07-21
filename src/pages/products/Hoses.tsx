@@ -86,7 +86,7 @@ const Hoses: React.FC = () => {
     <div className="min-h-screen bg-white">
       {/* Header Section */}
       <section className="bg-gradient-to-r text-white py-16" style={{ 
-        background: `linear-gradient(to right, ${colors.primary.main}, ${colors.secondary.main})`
+        background: `linear-gradient(to right, ${colors.primary.main}, ${colors.primary[700]}, ${colors.primary[300]})`
       }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
