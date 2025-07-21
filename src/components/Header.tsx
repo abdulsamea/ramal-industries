@@ -18,9 +18,9 @@ const Header: React.FC = () => {
       href: '/products',
       hasDropdown: true,
       dropdownItems: [
-        { name: t('hoses'), href: '/products/hoses' },
-        { name: t('bellows'), href: '/products/bellows' },
-        { name: t('fittings'), href: '/products/fittings' }
+        { name: t('Hoses'), href: '/products/hoses' },
+        { name: t('Bellows'), href: '/products/bellows' },
+        { name: t('End Fittings'), href: '/products/fittings' }
       ]
     },
     { name: t('about'), href: '/about' },
