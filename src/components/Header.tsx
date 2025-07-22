@@ -55,7 +55,7 @@ const Header: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-center md:justify-between items-center text-sm space-y-2 md:space-y-0 md:space-x-0 py-2">
             {/* Contact section */}
             <div className="flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0 md:space-x-4 w-full md:w-auto">
-              <span className="flex items-center justify-center">📞 +91-70214 83925</span>
+            <span className="flex items-center justify-center">📞 {t('phoneNumberNumerical')}</span>
               <span className="flex items-center justify-center">✉️ sales@ramalindustries.com</span>
             </div>
             {/* Language Dropdown */}
@@ -107,7 +107,7 @@ const Header: React.FC = () => {
               className="text-2xl font-bold"
               style={{ color: colors.primary.main }}
             >
-              Ramal Industries
+              {t('ramalIndustries')}
             </Link>
           </div>
 

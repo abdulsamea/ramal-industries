@@ -68,8 +68,8 @@ const Contact: React.FC = () => {
     {
       icon: <Phone className="h-6 w-6" style={{ color: colors.primary.main }} />,
       title: t('phone'),
-      details: ['+91-70214 83925'],
-      link: 'tel:+917021483925'
+      details: [t('phoneNumberNumerical')],
+      link: 'tel:'+ t('phoneNumberNumerical')
     },
     {
       icon: <Mail className="h-6 w-6" style={{ color: colors.primary.main }} />,
@@ -336,7 +336,7 @@ const Contact: React.FC = () => {
             <div className="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg flex items-center justify-center">
               <div className="text-center">
                 <MapPin className="h-12 w-12 mx-auto mb-4" style={{ color: colors.primary.main }} />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Ramal Industries</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('ramalIndustries')}</h3>
                 <p className="text-gray-600">
                   Sami Qureshi Chawl, Room No. 7, Group No.2,<br />
                   Hariyali Village (East), Mumbai, India - 400083

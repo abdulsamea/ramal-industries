@@ -10,6 +10,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 const translations = {
   en: {
+    ramalIndustries: 'Ramal Industries',
     // Navigation
     home: 'Home',
     products: 'Products',
@@ -150,6 +151,7 @@ const translations = {
     fullName: 'Full Name',
     emailAddress: 'Email Address',
     phoneNumber: 'Phone Number',
+    phoneNumberNumerical: '+91 70214 83925',
     subject: 'Subject',
     message: 'Message',
     sendMessageBtn: 'Send Message',
@@ -174,6 +176,7 @@ const translations = {
     followUs: 'Follow Us'
   },
   ar: {
+    ramalIndustries: 'صناعات الرمل',
     // Navigation
     home: 'الرئيسية',
     products: 'المنتجات',
@@ -468,28 +471,8 @@ const translations = {
     triCloverType4: 'مخفضات تراي كلامب',
     triCloverType5: 'تيهات ومرفقات تراي كلامب',
     triCloverType6: 'أغطية نهاية تراي كلامب',
-    
+    phoneNumberNumerical: '91-70214-83925+',
     // Contact Form Arabic
-    getInTouchTitle: 'تواصل معنا',
-    getInTouchDesc: 'نحن هنا لمساعدتك في العثور على حلول الخراطيم المرنة المثالية لاحتياجاتك الصناعية. اتصل بنا اليوم للحصول على مشورة الخبراء والأسعار التنافسية.',
-    sendMessage: 'أرسل لنا رسالة',
-    fullName: 'الاسم الكامل',
-    emailAddress: 'عنوان البريد الإلكتروني',
-    phoneNumber: 'رقم الهاتف',
-    subject: 'الموضوع',
-    message: 'الرسالة',
-    sendMessageBtn: 'إرسال الرسالة',
-    sending: 'جاري الإرسال...',
-    requiredFields: '* الحقول المطلوبة. سنرد على استفسارك خلال 24 ساعة.',
-    visitLocation: 'زيارة موقعنا',
-    locationDesc: 'تقع في مومباي، نحن نخدم العملاء في جميع أنحاء الهند بمجموعتنا الشاملة من الحلول الصناعية.',
-    businessHours: 'ساعات العمل',
-    mondayToSaturday: 'الاثنين - السبت: 9:00 صباحاً - 6:00 مساءً',
-    sundayClosed: 'الأحد: مغلق',
-    thankYouMessage: 'شكراً لك على رسالتك! سنعود إليك قريباً.',
-    errorMessage: 'عذراً، حدث خطأ في إرسال رسالتك. يرجى المحاولة مرة أخرى لاحقاً.',
-    emailNotConfigured: 'خدمة البريد الإلكتروني غير مكونة. يرجى الاتصال بنا مباشرة على sales@ramalindustries.com',
-    
     // Form placeholders
     namePlaceholder: 'أدخل اسمك الكامل',
     emailPlaceholder: 'أدخل عنوان بريدك الإلكتروني',
