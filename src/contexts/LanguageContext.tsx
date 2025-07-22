@@ -335,7 +335,7 @@ const translations = {
     footerText: 'الشركة الرائدة في تصنيع حلول الخراطيم المرنة وتركيبات الطرف',
     quickLinks: 'روابط سريعة',
     contactInfo: 'معلومات الاتصال',
-    followUs: 'تابعنا'
+    followUs: 'تابعنا',
     
     // Product Features - Hoses
     metalHoseFeature1: 'نطاق درجة الحرارة: -200°م إلى +800°م',
