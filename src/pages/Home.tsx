@@ -75,19 +75,19 @@ const Home: React.FC = () => {
   const products = [
     {
       title: t('flexibleHose'),
-      description: 'High-quality flexible hoses for various industrial applications',
+      description: 'flexibleHoseDesc',
       image: 'https://upload.wikimedia.org/wikipedia/commons/1/13/Metallschl%C3%A4uche.jpg',
       link: '/products/hoses'
     },
     {
       title: t('bellowSolutions'),
-      description: 'Precision-engineered bellow systems for specialized requirements',
+      description: 'bellowDesc',
       image: 'https://ssflexhose.com/wp-content/uploads/2022/03/ss-expansion-joint-bellows-2.jpg',
       link: '/products/bellows'
     },
     {
       title: t('endFittings'),
-      description: 'Comprehensive range of end fittings including flanges and couplings',
+      description: 'endFittingsDesc',
       image: 'https://www.msifittings.com/images/tri-clover-fittings.jpg',
       link: '/products/fittings'
     }
@@ -193,10 +193,10 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Products
+              {t('ourProducts')}
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Comprehensive range of industrial hose solutions and fittings
+              {t('ourProductsSubtitle')}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -209,7 +209,7 @@ const Home: React.FC = () => {
                 />
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{product.title}</h3>
-                  <p className="text-gray-600 mb-4">{product.description}</p>
+                  <p className="text-gray-600 mb-4">{t(product.description)}</p>
                   <Link
                     to={product.link}
                     className="font-semibold hover:opacity-80 transition-colors inline-flex items-center"
@@ -229,10 +229,10 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Ramal Industries?
+              {t('whyChooseUs')}
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              We deliver excellence through innovation, quality, and customer satisfaction
+              {t('whyChooseSubtitle')}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -241,8 +241,8 @@ const Home: React.FC = () => {
                 <div className="flex justify-center mb-4">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{t(feature.title === 'Quality Assurance' ? 'qualityAssurance' : feature.title === 'Expert Team' ? 'expertTeam' : 'quickDelivery')}</h3>
+                <p className="text-gray-600">{t(feature.description === 'ISO certified manufacturing processes ensuring the highest quality standards' ? 'qualityDesc' : feature.description === 'Experienced professionals with decades of industry expertise' ? 'expertDesc' : 'quickDesc')}</p>
               </div>
             ))}
           </div>
@@ -253,17 +253,17 @@ const Home: React.FC = () => {
       <section className="py-16 text-white" style={{ backgroundColor: colors.primary.main }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Get Started?
+            {t('readyToStart')}
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Contact us today for customized solutions that meet your specific industrial requirements
+            {t('readySubtitle')}
           </p>
           <Link
             to="/contact"
             className="bg-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
             style={{ color: colors.primary.main }}
           >
-            Get in Touch <ArrowRight className="ml-2 h-5 w-5" />
+            {t('getInTouch')} <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
       </section>

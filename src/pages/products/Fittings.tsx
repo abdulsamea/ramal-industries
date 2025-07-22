@@ -78,10 +78,10 @@ const Fittings: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              End Fittings
+              {t('endFittingsTitle')}
             </h1>
             <p className="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">
-              Comprehensive range of end fittings for secure and reliable connections
+              {t('endFittingsSubtitle')}
             </p>
           </div>
         </div>
@@ -102,33 +102,101 @@ const Fittings: React.FC = () => {
                 </div>
                 <div className="flex-1">
                   <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    {fitting.title}
+                    {t(fitting.title.replace('Quick Release Couplings', 'quickReleaseCouplings').replace('Camlock Couplings', 'camlockCouplings').replace('Tri Clover Fittings', 'triCloverFittings'))}
                   </h2>
                   <p className="text-lg text-gray-600 mb-6">
-                    {fitting.description}
+                    {t(fitting.description.replace('Fast and secure connections for easy assembly and disassembly', 'quickReleaseDesc').replace('Cam and groove couplings for rapid connection and disconnection', 'camlockDesc').replace('Sanitary tri-clamp fittings designed for hygienic applications in food, pharmaceutical, and biotech industries', 'triCloverDesc'))}
                   </p>
                   
                   <div className="mb-6">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Key Features:</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{t('language') === 'ar' ? 'الميزات الرئيسية:' : 'Key Features:'}</h3>
                     <ul className="space-y-2">
-                      {fitting.features.map((feature, featureIndex) => (
+                      {fitting.features.map((feature, featureIndex) => {
+                        let translatedFeature = feature;
+                        if (t('language') === 'ar') {
+                          if (index === 0) { // Quick Release Couplings
+                            const quickReleaseFeatures = [
+                              t('quickReleaseFeature1'),
+                              t('quickReleaseFeature2'),
+                              t('quickReleaseFeature3'),
+                              t('quickReleaseFeature4'),
+                              t('quickReleaseFeature5')
+                            ];
+                            translatedFeature = quickReleaseFeatures[featureIndex] || feature;
+                          } else if (index === 1) { // Camlock Couplings
+                            const camlockFeatures = [
+                              t('camlockFeature1'),
+                              t('camlockFeature2'),
+                              t('camlockFeature3'),
+                              t('camlockFeature4'),
+                              t('camlockFeature5')
+                            ];
+                            translatedFeature = camlockFeatures[featureIndex] || feature;
+                          } else if (index === 2) { // Tri Clover Fittings
+                            const triCloverFeatures = [
+                              t('triCloverFeature1'),
+                              t('triCloverFeature2'),
+                              t('triCloverFeature3'),
+                              t('triCloverFeature4'),
+                              t('triCloverFeature5'),
+                              t('triCloverFeature6')
+                            ];
+                            translatedFeature = triCloverFeatures[featureIndex] || feature;
+                          }
+                        }
+                        return (
                         <li key={featureIndex} className="flex items-center">
                           <CheckCircle className="h-5 w-5 mr-3 flex-shrink-0" style={{ color: colors.primary.main }} />
-                          <span className="text-gray-700">{feature}</span>
+                          <span className="text-gray-700">{translatedFeature}</span>
                         </li>
-                      ))}
+                        );
+                      })}
                     </ul>
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Available Types:</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{t('language') === 'ar' ? 'الأنواع المتاحة:' : 'Available Types:'}</h3>
                     <ul className="space-y-2">
-                      {fitting.types.map((type, typeIndex) => (
+                      {fitting.types.map((type, typeIndex) => {
+                        let translatedType = type;
+                        if (t('language') === 'ar') {
+                          if (index === 0) { // Quick Release Couplings
+                            const quickReleaseTypes = [
+                              t('quickReleaseType1'),
+                              t('quickReleaseType2'),
+                              t('quickReleaseType3'),
+                              t('quickReleaseType4'),
+                              t('quickReleaseType5')
+                            ];
+                            translatedType = quickReleaseTypes[typeIndex] || type;
+                          } else if (index === 1) { // Camlock Couplings
+                            const camlockTypes = [
+                              t('camlockType1'),
+                              t('camlockType2'),
+                              t('camlockType3'),
+                              t('camlockType4'),
+                              t('camlockType5')
+                            ];
+                            translatedType = camlockTypes[typeIndex] || type;
+                          } else if (index === 2) { // Tri Clover Fittings
+                            const triCloverTypes = [
+                              t('triCloverType1'),
+                              t('triCloverType2'),
+                              t('triCloverType3'),
+                              t('triCloverType4'),
+                              t('triCloverType5'),
+                              t('triCloverType6')
+                            ];
+                            translatedType = triCloverTypes[typeIndex] || type;
+                          }
+                        }
+                        return (
                         <li key={typeIndex} className="flex items-center">
                           <ArrowRight className="h-4 w-4 mr-3 flex-shrink-0" style={{ color: colors.primary.main }} />
-                          <span className="text-gray-700">{type}</span>
+                          <span className="text-gray-700">{translatedType}</span>
                         </li>
-                      ))}
+                        );
+                      })}
                     </ul>
                   </div>
                 </div>
@@ -143,10 +211,10 @@ const Fittings: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Material Options
+              {t('materialOptions')}
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              We offer fittings in various materials to suit different applications
+              {t('materialDesc')}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -154,29 +222,29 @@ const Fittings: React.FC = () => {
               <div className="text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: colors.primary.main }}>
                 <span className="text-sm font-bold">SS</span>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Stainless Steel</h3>
-              <p className="text-gray-600 text-sm">Corrosion resistant, high strength</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('stainlessSteel')}</h3>
+              <p className="text-gray-600 text-sm">{t('stainlessSteelDesc')}</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: colors.primary.main }}>
                 <span className="text-sm font-bold">CS</span>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Carbon Steel</h3>
-              <p className="text-gray-600 text-sm">Cost-effective, high strength</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('carbonSteel')}</h3>
+              <p className="text-gray-600 text-sm">{t('carbonSteelDesc')}</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: colors.primary.main }}>
                 <span className="text-sm font-bold">AL</span>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Aluminum</h3>
-              <p className="text-gray-600 text-sm">Lightweight, corrosion resistant</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('aluminum')}</h3>
+              <p className="text-gray-600 text-sm">{t('aluminumDesc')}</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: colors.primary.main }}>
                 <span className="text-sm font-bold">BR</span>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Brass</h3>
-              <p className="text-gray-600 text-sm">Excellent machinability</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('brass')}</h3>
+              <p className="text-gray-600 text-sm">{t('brassDesc')}</p>
             </div>
           </div>
         </div>
@@ -187,10 +255,10 @@ const Fittings: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Industry Standards
+              {t('industryStandards')}
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Our fittings comply with international standards and specifications
+              {t('standardsDesc')}
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -198,25 +266,25 @@ const Fittings: React.FC = () => {
               <div className="text-white rounded-lg p-4 mb-3" style={{ backgroundColor: colors.primary.main }}>
                 <span className="text-xl font-bold">ANSI</span>
               </div>
-              <p className="text-gray-600">American National Standards</p>
+              <p className="text-gray-600">{t('americanStandards')}</p>
             </div>
             <div className="text-center">
               <div className="text-white rounded-lg p-4 mb-3" style={{ backgroundColor: colors.primary.main }}>
                 <span className="text-xl font-bold">DIN</span>
               </div>
-              <p className="text-gray-600">German Industrial Standards</p>
+              <p className="text-gray-600">{t('germanStandards')}</p>
             </div>
             <div className="text-center">
               <div className="text-white rounded-lg p-4 mb-3" style={{ backgroundColor: colors.primary.main }}>
                 <span className="text-xl font-bold">JIS</span>
               </div>
-              <p className="text-gray-600">Japanese Industrial Standards</p>
+              <p className="text-gray-600">{t('japaneseStandards')}</p>
             </div>
             <div className="text-center">
               <div className="text-white rounded-lg p-4 mb-3" style={{ backgroundColor: colors.primary.main }}>
                 <span className="text-xl font-bold">BS</span>
               </div>
-              <p className="text-gray-600">British Standards</p>
+              <p className="text-gray-600">{t('britishStandards')}</p>
             </div>
           </div>
         </div>
@@ -226,17 +294,17 @@ const Fittings: React.FC = () => {
       <section className="py-16 text-white" style={{ backgroundColor: colors.primary.main }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Need Custom Fittings?
+            {t('needCustomFittings')}
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            We can manufacture custom fittings according to your specifications and requirements
+            {t('customFittingsDesc')}
           </p>
           <Link
             to="/contact"
             className="bg-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
             style={{ color: colors.primary.main }}
           >
-            Request Custom Quote <ArrowRight className="ml-2 h-5 w-5" />
+            {t('requestCustomQuote')} <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
       </section>
