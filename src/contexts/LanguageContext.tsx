@@ -336,6 +336,174 @@ const translations = {
     quickLinks: 'روابط سريعة',
     contactInfo: 'معلومات الاتصال',
     followUs: 'تابعنا'
+    
+    // Product Features - Hoses
+    metalHoseFeature1: 'نطاق درجة الحرارة: -200°م إلى +800°م',
+    metalHoseFeature2: 'مقاومة ضغط عالية تصل إلى 250 بار',
+    metalHoseFeature3: 'بناء من الفولاذ المقاوم للصدأ المقاوم للتآكل',
+    metalHoseFeature4: 'تصميم مرن للتركيبات المعقدة',
+    metalHoseFeature5: 'متوفر بأقطار مختلفة',
+    
+    metalHoseApp1: 'أنظمة البخار والماء الساخن',
+    metalHoseApp2: 'المعالجة الكيميائية',
+    metalHoseApp3: 'توليد الطاقة',
+    metalHoseApp4: 'أنظمة عادم السيارات',
+    
+    foodHoseFeature1: 'مواد معتمدة من FDA و USDA',
+    foodHoseFeature2: 'بناء غير سام وعديم الرائحة',
+    foodHoseFeature3: 'سهل التنظيف والتعقيم',
+    foodHoseFeature4: 'مقاوم لدرجة الحرارة حتى 120°م',
+    foodHoseFeature5: 'سطح داخلي أملس يمنع التلوث',
+    
+    foodHoseApp1: 'مصانع معالجة الأغذية',
+    foodHoseApp2: 'تصنيع المشروبات',
+    foodHoseApp3: 'صناعة الألبان',
+    foodHoseApp4: 'التطبيقات الصيدلانية',
+    
+    compositeHoseFeature1: 'بناء متعدد الطبقات للمتانة',
+    compositeHoseFeature2: 'بطانة داخلية مقاومة للمواد الكيميائية',
+    compositeHoseFeature3: 'معزز بألياف عالية القوة',
+    compositeHoseFeature4: 'قدرة على الطفو للاستخدام البحري',
+    compositeHoseFeature5: 'خيارات أقطار كبيرة متاحة',
+    
+    compositeHoseApp1: 'نقل النفط والغاز',
+    compositeHoseApp2: 'تحميل الوقود البحري',
+    compositeHoseApp3: 'عمليات صهاريج المواد الكيميائية',
+    compositeHoseApp4: 'نقل السوائل الصناعية بالجملة',
+    
+    rubberHoseFeature1: 'بناء مطاطي مرن',
+    rubberHoseFeature2: 'مقاوم للزيت والمواد الكيميائية',
+    rubberHoseFeature3: 'نطاق واسع من درجات الحرارة',
+    rubberHoseFeature4: 'تصنيفات ضغط مختلفة',
+    rubberHoseFeature5: 'حل فعال من حيث التكلفة',
+    
+    rubberHoseApp1: 'الأنظمة الهيدروليكية',
+    rubberHoseApp2: 'التطبيقات الهوائية',
+    rubberHoseApp3: 'نقل المياه',
+    rubberHoseApp4: 'الاستخدام الصناعي العام',
+    
+    // Product Features - Bellows
+    stainlessBellowFeature1: 'بناء من الفولاذ المقاوم للصدأ المقاوم للتآكل',
+    stainlessBellowFeature2: 'مقاومة درجة حرارة عالية تصل إلى 600°م',
+    stainlessBellowFeature3: 'عمر إجهاد ممتاز',
+    stainlessBellowFeature4: 'تصاميم مخصصة متاحة',
+    stainlessBellowFeature5: 'وصلات طرفية مختلفة',
+    
+    stainlessBellowApp1: 'محطات الطاقة',
+    stainlessBellowApp2: 'الصناعات البتروكيماوية',
+    stainlessBellowApp3: 'أنظمة التدفئة والتهوية وتكييف الهواء',
+    stainlessBellowApp4: 'خطوط أنابيب البخار',
+    
+    rubberBellowFeature1: 'امتصاص ممتاز للاهتزاز',
+    rubberBellowFeature2: 'مركبات مطاطية مقاومة للمواد الكيميائية',
+    rubberBellowFeature3: 'تركيب وصيانة سهلة',
+    rubberBellowFeature4: 'حل فعال من حيث التكلفة',
+    rubberBellowFeature5: 'مجموعة واسعة من الأحجام',
+    
+    rubberBellowApp1: 'محطات معالجة المياه',
+    rubberBellowApp2: 'أنظمة الضخ',
+    rubberBellowApp3: 'تطبيقات التدفئة والتهوية وتكييف الهواء',
+    rubberBellowApp4: 'الأنابيب الصناعية',
+    
+    ptfeBellowFeature1: 'مقاومة كيميائية استثنائية',
+    ptfeBellowFeature2: 'خصائص سطح غير لاصق',
+    ptfeBellowFeature3: 'نطاق درجة الحرارة: -200°م إلى +260°م',
+    ptfeBellowFeature4: 'مواد معتمدة من FDA',
+    ptfeBellowFeature5: 'معامل احتكاك منخفض',
+    
+    ptfeBellowApp1: 'المعالجة الكيميائية',
+    ptfeBellowApp2: 'الصناعة الصيدلانية',
+    ptfeBellowApp3: 'معالجة الأغذية',
+    ptfeBellowApp4: 'تصنيع أشباه الموصلات',
+    
+    fabricBellowFeature1: 'مقاومة استثنائية لدرجة الحرارة العالية تصل إلى 1000°م',
+    fabricBellowFeature2: 'بناء خفيف الوزن',
+    fabricBellowFeature3: 'خصائص عزل حراري فائقة',
+    fabricBellowFeature4: 'مواد قماش مخصصة لتطبيقات محددة',
+    fabricBellowFeature5: 'قدرة حركة محورية وجانبية كبيرة',
+    fabricBellowFeature6: 'مقاومة كيميائية ممتازة',
+    
+    fabricBellowApp1: 'أنظمة القنوات عالية الحرارة',
+    fabricBellowApp2: 'الأفران والمواقد الصناعية',
+    fabricBellowApp3: 'وصلات غلايات محطات الطاقة',
+    fabricBellowApp4: 'تطبيقات مصانع الصلب',
+    fabricBellowApp5: 'معدات مصانع الأسمنت',
+    fabricBellowApp6: 'أنظمة عادم التوربينات الغازية',
+    
+    // Product Features - Fittings
+    quickReleaseFeature1: 'تشغيل بيد واحدة',
+    quickReleaseFeature2: 'إحكام مقاوم للتسرب',
+    quickReleaseFeature3: 'مواد مقاومة للتآكل',
+    quickReleaseFeature4: 'قدرة ضغط عالية',
+    quickReleaseFeature5: 'وصلات طرفية مختلفة',
+    
+    quickReleaseType1: 'وصلات سريعة هيدروليكية',
+    quickReleaseType2: 'وصلات سريعة هوائية',
+    quickReleaseType3: 'وصلات سريعة للمياه',
+    quickReleaseType4: 'وصلات سريعة كيميائية',
+    quickReleaseType5: 'وصلات سريعة للبخار',
+    
+    camlockFeature1: 'اتصال/فصل سريع',
+    camlockFeature2: 'تصميم ذاتي الإحكام',
+    camlockFeature3: 'خيارات مواد متعددة',
+    camlockFeature4: 'أحجام قياسية ومترية',
+    camlockFeature5: 'أغطية غبار وسدادات متاحة',
+    
+    camlockType1: 'النوع أ - محول مع خيط خارجي',
+    camlockType2: 'النوع ب - مقرن مع خيط داخلي',
+    camlockType3: 'النوع ج - مقرن مع ساق خرطوم',
+    camlockType4: 'النوع د - مقرن مع خيط أنثوي',
+    camlockType5: 'النوع هـ - محول مع ساق خرطوم',
+    
+    triCloverFeature1: 'تصميم صحي للتطبيقات النظيفة',
+    triCloverFeature2: 'تجميع وتفكيك سريع',
+    triCloverFeature3: 'أسطح داخلية ملساء تمنع التلوث',
+    triCloverFeature4: 'مواد معتمدة من FDA',
+    triCloverFeature5: 'تنظيف وتعقيم سهل',
+    triCloverFeature6: 'نظام إحكام بالحشية',
+    
+    triCloverType1: 'حلقات تراي كلامب',
+    triCloverType2: 'حشيات تراي كلامب',
+    triCloverType3: 'مشابك تراي كلامب',
+    triCloverType4: 'مخفضات تراي كلامب',
+    triCloverType5: 'تيهات ومرفقات تراي كلامب',
+    triCloverType6: 'أغطية نهاية تراي كلامب',
+    
+    // Contact Form Arabic
+    getInTouchTitle: 'تواصل معنا',
+    getInTouchDesc: 'نحن هنا لمساعدتك في العثور على حلول الخراطيم المرنة المثالية لاحتياجاتك الصناعية. اتصل بنا اليوم للحصول على مشورة الخبراء والأسعار التنافسية.',
+    sendMessage: 'أرسل لنا رسالة',
+    fullName: 'الاسم الكامل',
+    emailAddress: 'عنوان البريد الإلكتروني',
+    phoneNumber: 'رقم الهاتف',
+    subject: 'الموضوع',
+    message: 'الرسالة',
+    sendMessageBtn: 'إرسال الرسالة',
+    sending: 'جاري الإرسال...',
+    requiredFields: '* الحقول المطلوبة. سنرد على استفسارك خلال 24 ساعة.',
+    visitLocation: 'زيارة موقعنا',
+    locationDesc: 'تقع في مومباي، نحن نخدم العملاء في جميع أنحاء الهند بمجموعتنا الشاملة من الحلول الصناعية.',
+    businessHours: 'ساعات العمل',
+    mondayToSaturday: 'الاثنين - السبت: 9:00 صباحاً - 6:00 مساءً',
+    sundayClosed: 'الأحد: مغلق',
+    thankYouMessage: 'شكراً لك على رسالتك! سنعود إليك قريباً.',
+    errorMessage: 'عذراً، حدث خطأ في إرسال رسالتك. يرجى المحاولة مرة أخرى لاحقاً.',
+    emailNotConfigured: 'خدمة البريد الإلكتروني غير مكونة. يرجى الاتصال بنا مباشرة على sales@ramalindustries.com',
+    
+    // Form placeholders
+    namePlaceholder: 'أدخل اسمك الكامل',
+    emailPlaceholder: 'أدخل عنوان بريدك الإلكتروني',
+    phonePlaceholder: 'أدخل رقم هاتفك',
+    subjectPlaceholder: 'ما هو موضوع الاستفسار؟',
+    messagePlaceholder: 'يرجى وصف متطلباتك أو استفسارك بالتفصيل...',
+    
+    // About page achievements
+    achievement1: '10+ سنوات من الخبرة',
+    achievement2: '100+ عميل راضٍ',
+    achievement3: 'تصنيع معتمد من ISO',
+    achievement4: 'دعم العملاء 24/7',
+    achievement5: 'شبكة توصيل عبر الهند',
+    achievement6: 'خبرة في الحلول المخصصة'
   }
 };
 

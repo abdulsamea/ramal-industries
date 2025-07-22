@@ -120,10 +120,9 @@ const Contact: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Get in Touch</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">{t('getInTouchTitle')}</h2>
               <p className="text-lg text-gray-600 mb-8">
-                We're here to help you find the perfect flexible hose solutions for your industrial needs. 
-                Contact us today for expert advice and competitive pricing.
+                {t('getInTouchDesc')}
               </p>
               
               <div className="space-y-6">
@@ -159,7 +158,7 @@ const Contact: React.FC = () => {
 
             {/* Contact Form */}
             <div className="bg-gray-50 p-8 rounded-lg">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Send us a Message</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">{t('sendMessage')}</h2>
               
               {/* Success Message */}
               {success && (
@@ -181,7 +180,7 @@ const Contact: React.FC = () => {
                 {/* Name Field */}
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Full Name *
+                    {t('fullName')} *
                   </label>
                   <input
                     type="text"
@@ -189,7 +188,7 @@ const Contact: React.FC = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="Enter your full name"
+                    placeholder={t('namePlaceholder')}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent transition-colors"
                     style={{ 
                       '--focus-ring-color': colors.primary.main 
@@ -207,7 +206,7 @@ const Contact: React.FC = () => {
                 {/* Email Field */}
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address *
+                    {t('emailAddress')} *
                   </label>
                   <input
                     type="email"
@@ -215,7 +214,7 @@ const Contact: React.FC = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="Enter your email address"
+                    placeholder={t('emailPlaceholder')}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent transition-colors"
                     onFocus={(e) => {
                       e.target.style.boxShadow = `0 0 0 2px ${colors.primary.main}40`;
@@ -252,7 +251,7 @@ const Contact: React.FC = () => {
                 {/* Subject Field */}
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                    Subject *
+                    {t('subject')} *
                   </label>
                   <input
                     type="text"
@@ -260,7 +259,7 @@ const Contact: React.FC = () => {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    placeholder="What is this regarding?"
+                    placeholder={t('subjectPlaceholder')}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent transition-colors"
                     onFocus={(e) => {
                       e.target.style.boxShadow = `0 0 0 2px ${colors.primary.main}40`;
@@ -275,7 +274,7 @@ const Contact: React.FC = () => {
                 {/* Message Field */}
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message *
+                    {t('message')} *
                   </label>
                   <textarea
                     id="message"
@@ -283,7 +282,7 @@ const Contact: React.FC = () => {
                     rows={6}
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Please describe your requirements or inquiry in detail..."
+                    placeholder={t('messagePlaceholder')}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent resize-vertical transition-colors"
                     onFocus={(e) => {
                       e.target.style.boxShadow = `0 0 0 2px ${colors.primary.main}40`;
@@ -328,9 +327,9 @@ const Contact: React.FC = () => {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Visit Our Location</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('visitLocation')}</h2>
             <p className="text-lg text-gray-600">
-              Located in Mumbai, we serve customers across India with our comprehensive range of industrial solutions.
+              {t('locationDesc')}
             </p>
           </div>
           <div className="bg-white rounded-lg shadow-md p-6">

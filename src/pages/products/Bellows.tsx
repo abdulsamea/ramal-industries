@@ -127,24 +127,107 @@ const Bellows: React.FC = () => {
                   <div className="mb-6">
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">{t('language') === 'ar' ? 'الميزات الرئيسية:' : 'Key Features:'}</h3>
                     <ul className="space-y-2">
-                      {bellow.features.map((feature, featureIndex) => (
+                      {bellow.features.map((feature, featureIndex) => {
+                        let translatedFeature = feature;
+                        if (t('language') === 'ar') {
+                          if (index === 0) { // Stainless Steel Expansion Bellows
+                            const stainlessFeatures = [
+                              t('stainlessBellowFeature1'),
+                              t('stainlessBellowFeature2'),
+                              t('stainlessBellowFeature3'),
+                              t('stainlessBellowFeature4'),
+                              t('stainlessBellowFeature5')
+                            ];
+                            translatedFeature = stainlessFeatures[featureIndex] || feature;
+                          } else if (index === 1) { // Rubber Expansion Bellows
+                            const rubberFeatures = [
+                              t('rubberBellowFeature1'),
+                              t('rubberBellowFeature2'),
+                              t('rubberBellowFeature3'),
+                              t('rubberBellowFeature4'),
+                              t('rubberBellowFeature5')
+                            ];
+                            translatedFeature = rubberFeatures[featureIndex] || feature;
+                          } else if (index === 2) { // PTFE Bellow Expansion Joints
+                            const ptfeFeatures = [
+                              t('ptfeBellowFeature1'),
+                              t('ptfeBellowFeature2'),
+                              t('ptfeBellowFeature3'),
+                              t('ptfeBellowFeature4'),
+                              t('ptfeBellowFeature5')
+                            ];
+                            translatedFeature = ptfeFeatures[featureIndex] || feature;
+                          } else if (index === 3) { // High Temperature Fabric Bellow
+                            const fabricFeatures = [
+                              t('fabricBellowFeature1'),
+                              t('fabricBellowFeature2'),
+                              t('fabricBellowFeature3'),
+                              t('fabricBellowFeature4'),
+                              t('fabricBellowFeature5'),
+                              t('fabricBellowFeature6')
+                            ];
+                            translatedFeature = fabricFeatures[featureIndex] || feature;
+                          }
+                        }
+                        return (
                         <li key={featureIndex} className="flex items-center">
                           <CheckCircle className="h-5 w-5 mr-3 flex-shrink-0" style={{ color: colors.primary.main }} />
-                          <span className="text-gray-700">{feature}</span>
+                          <span className="text-gray-700">{translatedFeature}</span>
                         </li>
-                      ))}
+                        );
+                      })}
                     </ul>
                   </div>
 
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">{t('language') === 'ar' ? 'التطبيقات:' : 'Applications:'}</h3>
                     <ul className="space-y-2">
-                      {bellow.applications.map((application, appIndex) => (
+                      {bellow.applications.map((application, appIndex) => {
+                        let translatedApplication = application;
+                        if (t('language') === 'ar') {
+                          if (index === 0) { // Stainless Steel Expansion Bellows
+                            const stainlessApps = [
+                              t('stainlessBellowApp1'),
+                              t('stainlessBellowApp2'),
+                              t('stainlessBellowApp3'),
+                              t('stainlessBellowApp4')
+                            ];
+                            translatedApplication = stainlessApps[appIndex] || application;
+                          } else if (index === 1) { // Rubber Expansion Bellows
+                            const rubberApps = [
+                              t('rubberBellowApp1'),
+                              t('rubberBellowApp2'),
+                              t('rubberBellowApp3'),
+                              t('rubberBellowApp4')
+                            ];
+                            translatedApplication = rubberApps[appIndex] || application;
+                          } else if (index === 2) { // PTFE Bellow Expansion Joints
+                            const ptfeApps = [
+                              t('ptfeBellowApp1'),
+                              t('ptfeBellowApp2'),
+                              t('ptfeBellowApp3'),
+                              t('ptfeBellowApp4')
+                            ];
+                            translatedApplication = ptfeApps[appIndex] || application;
+                          } else if (index === 3) { // High Temperature Fabric Bellow
+                            const fabricApps = [
+                              t('fabricBellowApp1'),
+                              t('fabricBellowApp2'),
+                              t('fabricBellowApp3'),
+                              t('fabricBellowApp4'),
+                              t('fabricBellowApp5'),
+                              t('fabricBellowApp6')
+                            ];
+                            translatedApplication = fabricApps[appIndex] || application;
+                          }
+                        }
+                        return (
                         <li key={appIndex} className="flex items-center">
                           <ArrowRight className="h-4 w-4 mr-3 flex-shrink-0" style={{ color: colors.primary.main }} />
-                          <span className="text-gray-700">{application}</span>
+                          <span className="text-gray-700">{translatedApplication}</span>
                         </li>
-                      ))}
+                        );
+                      })}
                     </ul>
                   </div>
                 </div>

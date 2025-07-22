@@ -120,7 +120,16 @@ const About: React.FC = () => {
             {achievements.map((achievement, index) => (
               <div key={index} className="flex items-center p-4 bg-gray-50 rounded-lg">
                 <CheckCircle className="h-6 w-6 mr-3 flex-shrink-0" style={{ color: colors.primary.main }} />
-                <span className="text-gray-700 font-medium">{t('language') === 'ar' ? (achievement === '10+ Years of Experience' ? '10+ سنوات من الخبرة' : achievement === '100+ Satisfied Customers' ? '100+ عميل راضٍ' : achievement === 'ISO Certified Manufacturing' ? 'تصنيع معتمد من ISO' : achievement === '24/7 Customer Support' ? 'دعم العملاء 24/7' : achievement === 'Pan-India Delivery Network' ? 'شبكة توصيل عبر الهند' : achievement === 'Custom Solution Expertise' ? 'خبرة في الحلول المخصصة' : achievement) : achievement}</span>
+                <span className="text-gray-700 font-medium">
+                  {t('language') === 'ar' ? 
+                    (index === 0 ? t('achievement1') :
+                     index === 1 ? t('achievement2') :
+                     index === 2 ? t('achievement3') :
+                     index === 3 ? t('achievement4') :
+                     index === 4 ? t('achievement5') :
+                     index === 5 ? t('achievement6') : achievement) 
+                    : achievement}
+                </span>
               </div>
             ))}
           </div>

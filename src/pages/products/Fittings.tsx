@@ -111,24 +111,92 @@ const Fittings: React.FC = () => {
                   <div className="mb-6">
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">{t('language') === 'ar' ? 'الميزات الرئيسية:' : 'Key Features:'}</h3>
                     <ul className="space-y-2">
-                      {fitting.features.map((feature, featureIndex) => (
+                      {fitting.features.map((feature, featureIndex) => {
+                        let translatedFeature = feature;
+                        if (t('language') === 'ar') {
+                          if (index === 0) { // Quick Release Couplings
+                            const quickReleaseFeatures = [
+                              t('quickReleaseFeature1'),
+                              t('quickReleaseFeature2'),
+                              t('quickReleaseFeature3'),
+                              t('quickReleaseFeature4'),
+                              t('quickReleaseFeature5')
+                            ];
+                            translatedFeature = quickReleaseFeatures[featureIndex] || feature;
+                          } else if (index === 1) { // Camlock Couplings
+                            const camlockFeatures = [
+                              t('camlockFeature1'),
+                              t('camlockFeature2'),
+                              t('camlockFeature3'),
+                              t('camlockFeature4'),
+                              t('camlockFeature5')
+                            ];
+                            translatedFeature = camlockFeatures[featureIndex] || feature;
+                          } else if (index === 2) { // Tri Clover Fittings
+                            const triCloverFeatures = [
+                              t('triCloverFeature1'),
+                              t('triCloverFeature2'),
+                              t('triCloverFeature3'),
+                              t('triCloverFeature4'),
+                              t('triCloverFeature5'),
+                              t('triCloverFeature6')
+                            ];
+                            translatedFeature = triCloverFeatures[featureIndex] || feature;
+                          }
+                        }
+                        return (
                         <li key={featureIndex} className="flex items-center">
                           <CheckCircle className="h-5 w-5 mr-3 flex-shrink-0" style={{ color: colors.primary.main }} />
-                          <span className="text-gray-700">{feature}</span>
+                          <span className="text-gray-700">{translatedFeature}</span>
                         </li>
-                      ))}
+                        );
+                      })}
                     </ul>
                   </div>
 
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">{t('language') === 'ar' ? 'الأنواع المتاحة:' : 'Available Types:'}</h3>
                     <ul className="space-y-2">
-                      {fitting.types.map((type, typeIndex) => (
+                      {fitting.types.map((type, typeIndex) => {
+                        let translatedType = type;
+                        if (t('language') === 'ar') {
+                          if (index === 0) { // Quick Release Couplings
+                            const quickReleaseTypes = [
+                              t('quickReleaseType1'),
+                              t('quickReleaseType2'),
+                              t('quickReleaseType3'),
+                              t('quickReleaseType4'),
+                              t('quickReleaseType5')
+                            ];
+                            translatedType = quickReleaseTypes[typeIndex] || type;
+                          } else if (index === 1) { // Camlock Couplings
+                            const camlockTypes = [
+                              t('camlockType1'),
+                              t('camlockType2'),
+                              t('camlockType3'),
+                              t('camlockType4'),
+                              t('camlockType5')
+                            ];
+                            translatedType = camlockTypes[typeIndex] || type;
+                          } else if (index === 2) { // Tri Clover Fittings
+                            const triCloverTypes = [
+                              t('triCloverType1'),
+                              t('triCloverType2'),
+                              t('triCloverType3'),
+                              t('triCloverType4'),
+                              t('triCloverType5'),
+                              t('triCloverType6')
+                            ];
+                            translatedType = triCloverTypes[typeIndex] || type;
+                          }
+                        }
+                        return (
                         <li key={typeIndex} className="flex items-center">
                           <ArrowRight className="h-4 w-4 mr-3 flex-shrink-0" style={{ color: colors.primary.main }} />
-                          <span className="text-gray-700">{type}</span>
+                          <span className="text-gray-700">{translatedType}</span>
                         </li>
-                      ))}
+                        );
+                      })}
                     </ul>
                   </div>
                 </div>
