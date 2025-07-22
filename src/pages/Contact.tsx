@@ -67,19 +67,19 @@ const Contact: React.FC = () => {
   const contactInfo = [
     {
       icon: <Phone className="h-6 w-6" style={{ color: colors.primary.main }} />,
-      title: 'Phone',
+      title: t('phone'),
       details: ['+91-70214 83925'],
       link: 'tel:+917021483925'
     },
     {
       icon: <Mail className="h-6 w-6" style={{ color: colors.primary.main }} />,
-      title: 'Email',
+      title: t('email'),
       details: ['sales@ramalindustries.com'],
       link: 'mailto:sales@ramalindustries.com'
     },
     {
       icon: <MapPin className="h-6 w-6" style={{ color: colors.primary.main }} />,
-      title: 'Address',
+      title: t('address'),
       details: [
         'Sami Qureshi Chawl, Room No. 7,',
         'Group No.2, Hariyali Village (East),',
@@ -88,10 +88,10 @@ const Contact: React.FC = () => {
     },
     {
       icon: <Clock className="h-6 w-6" style={{ color: colors.primary.main }} />,
-      title: 'Business Hours',
+      title: t('businessHours'),
       details: [
-        'Monday - Saturday: 9:00 AM - 6:00 PM',
-        'Sunday: Closed'
+        t('mondayToSaturday'),
+        t('sundayClosed')
       ]
     }
   ];
@@ -173,7 +173,7 @@ const Contact: React.FC = () => {
               {error && (
                 <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
                   <AlertCircle className="h-5 w-5 text-red-600 mr-3" />
-                  <p className="text-red-700">{error}</p>
+                  <p className="text-red-700">{error.includes('Email service is not configured') ? t('emailNotConfigured') : t('errorMessage')}</p>
                 </div>
               )}
 

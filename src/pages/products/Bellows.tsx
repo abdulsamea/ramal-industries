@@ -94,10 +94,10 @@ const Bellows: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Bellow Solutions
+              {t('bellowSolutionsTitle')}
             </h1>
             <p className="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">
-              Precision-engineered expansion joints and bellows for industrial applications
+              {t('bellowSolutionsSubtitle')}
             </p>
           </div>
         </div>
@@ -118,14 +118,14 @@ const Bellows: React.FC = () => {
                 </div>
                 <div className="flex-1">
                   <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    {bellow.title}
+                    {t(bellow.title.replace('Stainless Steel Expansion Bellows', 'stainlessBellows').replace('Rubber Expansion Bellows', 'rubberBellows').replace('PTFE Bellow Expansion Joints', 'ptfeBellows').replace('High Temperature Fabric Bellow', 'fabricBellows'))}
                   </h2>
                   <p className="text-lg text-gray-600 mb-6">
-                    {bellow.description}
+                    {t(bellow.description.replace('High-quality stainless steel bellows for thermal expansion and vibration absorption', 'stainlessBellowDesc').replace('Flexible rubber bellows designed for vibration isolation and thermal movement', 'rubberBellowDesc').replace('Chemical resistant PTFE bellows for aggressive chemical environments', 'ptfeBellowDesc').replace('Specialized fabric bellows designed for high-temperature applications and thermal insulation', 'fabricBellowDesc'))}
                   </p>
                   
                   <div className="mb-6">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Key Features:</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{t('language') === 'ar' ? 'الميزات الرئيسية:' : 'Key Features:'}</h3>
                     <ul className="space-y-2">
                       {bellow.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center">
@@ -137,7 +137,7 @@ const Bellows: React.FC = () => {
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Applications:</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{t('language') === 'ar' ? 'التطبيقات:' : 'Applications:'}</h3>
                     <ul className="space-y-2">
                       {bellow.applications.map((application, appIndex) => (
                         <li key={appIndex} className="flex items-center">
@@ -159,10 +159,10 @@ const Bellows: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Our Bellows?
+              {t('whyChooseBellows')}
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Our bellows provide superior performance and reliability
+              {t('bellowBenefitsDesc')}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -170,22 +170,22 @@ const Bellows: React.FC = () => {
               <div className="text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: colors.primary.main }}>
                 <span className="text-2xl font-bold">1</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Thermal Compensation</h3>
-              <p className="text-gray-600">Absorbs thermal expansion and contraction in piping systems</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('thermalCompensation')}</h3>
+              <p className="text-gray-600">{t('thermalDesc')}</p>
             </div>
             <div className="text-center p-6">
               <div className="text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: colors.primary.main }}>
                 <span className="text-2xl font-bold">2</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Vibration Isolation</h3>
-              <p className="text-gray-600">Reduces vibration transmission and noise in systems</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('vibrationIsolation')}</h3>
+              <p className="text-gray-600">{t('vibrationDesc')}</p>
             </div>
             <div className="text-center p-6">
               <div className="text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: colors.primary.main }}>
                 <span className="text-2xl font-bold">3</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Misalignment Correction</h3>
-              <p className="text-gray-600">Compensates for angular and lateral misalignments</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('misalignmentCorrection')}</h3>
+              <p className="text-gray-600">{t('misalignmentDesc')}</p>
             </div>
           </div>
         </div>
@@ -195,17 +195,17 @@ const Bellows: React.FC = () => {
       <section className="py-16 text-white" style={{ backgroundColor: colors.primary.main }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Need Custom Bellow Solutions?
+            {t('needCustomBellow')}
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Our engineering team can design custom bellows to meet your specific requirements
+            {t('customBellowDesc')}
           </p>
           <Link
             to="/contact"
             className="bg-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
             style={{ color: colors.primary.main }}
           >
-            Contact Engineers <ArrowRight className="ml-2 h-5 w-5" />
+            {t('contactEngineers')} <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
       </section>

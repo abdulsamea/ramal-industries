@@ -91,10 +91,10 @@ const Hoses: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Flexible Hoses
+              {t('flexibleHosesTitle')}
             </h1>
             <p className="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">
-              High-quality flexible hoses for diverse industrial applications
+              {t('flexibleHosesSubtitle')}
             </p>
           </div>
         </div>
@@ -115,14 +115,14 @@ const Hoses: React.FC = () => {
                 </div>
                 <div className="flex-1">
                   <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    {hose.title}
+                    {t(hose.title.replace('Metal Flexible Hoses', 'metalFlexibleHoses').replace('Food Grade Hoses', 'foodGradeHoses').replace('Composite Tanker Hoses', 'compositeHoses').replace('Industrial Rubber Hoses', 'rubberHoses'))}
                   </h2>
                   <p className="text-lg text-gray-600 mb-6">
-                    {hose.description}
+                    {t(hose.description.replace('High-performance metal hoses designed for extreme temperature and pressure conditions', 'metalHoseDesc').replace('FDA approved hoses specifically designed for food and beverage industry applications', 'foodHoseDesc').replace('Heavy-duty composite hoses for marine and industrial tanker applications', 'compositeDesc').replace('Versatile rubber hoses for general industrial applications', 'rubberDesc'))}
                   </p>
                   
                   <div className="mb-6">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Key Features:</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{t('language') === 'ar' ? 'الميزات الرئيسية:' : 'Key Features:'}</h3>
                     <ul className="space-y-2">
                       {hose.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center">
@@ -134,7 +134,7 @@ const Hoses: React.FC = () => {
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Applications:</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{t('language') === 'ar' ? 'التطبيقات:' : 'Applications:'}</h3>
                     <ul className="space-y-2">
                       {hose.applications.map((application, appIndex) => (
                         <li key={appIndex} className="flex items-center">
@@ -155,17 +155,17 @@ const Hoses: React.FC = () => {
       <section className="py-16 text-white" style={{ backgroundColor: colors.primary.main }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Need Custom Hose Solutions?
+            {t('needCustomHose')}
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Contact our experts for customized hose solutions tailored to your specific requirements
+            {t('customHoseDesc')}
           </p>
           <Link
             to="/contact"
             className="bg-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
             style={{ color: colors.primary.main }}
           >
-            Get Quote <ArrowRight className="ml-2 h-5 w-5" />
+            {t('getQuote')} <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
       </section>
