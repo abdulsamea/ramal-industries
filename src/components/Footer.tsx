@@ -32,11 +32,8 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            <h3
-              className="text-2xl font-bold mb-4"
-              style={{ color: 'white' }}
-            >
-              {t('ramalIndustries')}
+            <h3 className="text-2xl font-bold mb-4" style={{ color: "white" }}>
+              {t("ramalIndustries")}
             </h3>
             <p className="text-gray-300 mb-4 max-w-md">{t("footerText")}</p>
             {/* Social media icons hidden as requested */}
@@ -80,7 +77,9 @@ const Footer: React.FC = () => {
                   className="mt-1 flex-shrink-0"
                   style={{ color: colors.primary.main }}
                 />
-                <span className="text-gray-300">{t('phoneNumberNumerical')}</span>
+                <span className="text-gray-300">
+                  {t("phoneNumberNumerical")}
+                </span>
               </div>
               <div className="flex items-start space-x-3">
                 <Mail
@@ -88,7 +87,7 @@ const Footer: React.FC = () => {
                   className="mt-1 flex-shrink-0"
                   style={{ color: colors.primary.main }}
                 />
-                <span className="text-gray-300">sales@ramalindustries.com</span>
+                <span className="text-gray-300">info@ramalindustries.com</span>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin
